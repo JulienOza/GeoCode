@@ -1,0 +1,141 @@
+@import "../../../variable.scss";
+
+fieldset {
+  all: unset;
+}
+
+.DialogOverlay {
+  background-color: $colorDark;
+  opacity: 60%;
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.DialogContent {
+  background-color: $colorLight;
+  border-radius: 6px;
+  box-shadow: $boxShadow;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 30rem;
+  max-height: 85vh;
+  padding: 1.5rem;
+  animation: contentShow 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.DialogContent:focus {
+  outline: none;
+}
+
+.DialogTitle {
+  margin: 0;
+  font-weight: 500;
+  color: $colorDark;
+  font-size: 1.7rem;
+}
+
+.DialogDescription {
+  margin: 1vh 0 2vh;
+  color: $colorDark;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.buttonAddCar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: $gradient180deg;
+  border-radius: $borderButton;
+  padding: 0 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1;
+  font-weight: 500;
+  height: 2rem;
+  color: $colorLight;
+  box-shadow: $boxShadow;
+  border: $borderDark;
+}
+
+.closeButton {
+  border: $borderDark;
+  font-family: inherit;
+  border-radius: 100%;
+  height: 2rem;
+  width: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $colorDark;
+  position: absolute;
+  top: 2vh;
+  right: 1vw;
+}
+.closeButton:hover {
+  background-color: $colorPrimary;
+}
+.closeButton:focus {
+  box-shadow: 0 0 0 2px $colorPrimary;
+}
+
+.fieldsetBrand,
+.fieldsetModel {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2vh;
+}
+
+.labelBrand,
+.labelModel {
+  font-size: 1.2rem;
+  color: $colorDark;
+  width: 6rem;
+  text-align: right;
+}
+
+.inputBrand,
+.inputModel {
+  width: 100%;
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 0.2vh 0.5vw;
+  font-size: 1rem;
+  line-height: 1;
+  color: $colorDark;
+  box-shadow: 0 0 0 1px $colorDark;
+}
+.inputBrand:focus,
+.inputModel:focus {
+  box-shadow: 0 0 0 2px $colorPrimary;
+}
+.carAddButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 60%;
+  }
+}
+
+@keyframes contentShow {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

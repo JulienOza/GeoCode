@@ -1,0 +1,75 @@
+@import "../../variable.scss";
+.ChargepointBook2TextContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  background-color: $colorLight;
+  width: 85vw;
+  margin: auto;
+  padding: 1rem;
+}
+.ChargepointBook2Text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $colorPrimary_trans;
+  font-family: $fontFamily;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  width: 75vw;
+  height: 12vh;
+  padding: 1rem;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.beCareful {
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $colorPrimary_trans;
+  font-family: $fontFamily;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  width: 75vw;
+  height: 12vh;
+  padding: 1rem;
+  margin: 1rem auto;
+  text-align: center;
+}
+.answerBtn {
+  font-family: $fontFamily;
+  background: $gradient180deg;
+  border: solid $colorDark 2px;
+  border-color: $colorDark;
+  box-shadow: $colorDark 5px 7px 15px 1px;
+  border-radius: 10px 50px;
+  color: $colorLight;
+  width: 30vw;
+  height: 5vh;
+  font-size: 1.2rem;
+  margin: 1vw;
+}
+
+@media screen and (min-width: 600px) {
+  .ChargepointBook2TextContainer {
+    width: 35vw;
+    margin-top: 1vh;
+  }
+
+  .ChargepointBook2Text {
+    width: 45vw;
+    font-size: 2rem;
+  }
+  .beCareful {
+    font-size: 2rem;
+  }
+
+  .answerBtn {
+    font-size: 2rem;
+    width: 11vw;
+    height: 6vh;
+  }
+}

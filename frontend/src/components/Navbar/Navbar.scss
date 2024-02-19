@@ -1,0 +1,123 @@
+@import "../../variable.scss";
+
+.navbar_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background: $gradient90deg;
+  height: 4rem;
+  width: 18rem;
+  border-radius: 24px;
+  border: $borderDark;
+  box-shadow: $boxShadow;
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.navbar_container * {
+  z-index: 499;
+}
+.navbar_element {
+  list-style: none;
+  width: 33.33%;
+  height: 100%;
+}
+.navbar_element button {
+  all: unset;
+  cursor: pointer;
+}
+
+.navbar_element a,
+.navbar_element button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar_element_middle {
+  border-left: $borderDark;
+  border-right: $borderDark;
+}
+
+.navbar_img {
+  height: auto;
+  width: 50%;
+}
+
+.dialogOverlay {
+  background-color: $colorDark;
+  opacity: 60%;
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 499;
+}
+
+.dialogContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 95vw;
+  height: 75vh;
+  padding: 1.5rem;
+  background-color: $colorLight;
+  border: $borderDark;
+  border-radius: 10px;
+  box-shadow: $boxShadow;
+  animation: contentShow 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: scroll;
+  z-index: 500;
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 60%;
+  }
+}
+
+@keyframes contentShow {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .dialogContent {
+    width: 40vw;
+    margin-right: 0;
+  }
+
+  .stationInfos {
+    width: 35vw;
+  }
+  .book {
+    margin-right: 0;
+    width: 15vw;
+  }
+
+  .navbar_list {
+    width: 30rem;
+    height: 4.5rem;
+  }
+
+  .navbar_img {
+    height: auto;
+    width: 35%;
+  }
+}

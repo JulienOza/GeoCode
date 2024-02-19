@@ -1,0 +1,190 @@
+@import "../../variable.scss";
+
+.allElements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $colorLight;
+  border-radius: 20px;
+  width: 82vw;
+  padding: 1vw;
+  margin: O;
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.backButtonModal {
+  border: none;
+  background: none;
+  position: absolute;
+  bottom: 1vh;
+  left: 0;
+  img {
+    width: 10vw;
+  }
+}
+.titleCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $fontFamily;
+  background: $gradient180deg;
+  border: solid $colorDark 2px;
+  border-color: $colorDark;
+  box-shadow: $colorDark 5px 7px 15px 1px;
+  border-radius: 10px 50px;
+  text-shadow: $textDropShadow;
+  color: $colorLight;
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 2vh;
+  width: 70vw;
+  height: 4vh;
+}
+
+.selectedDateDisplay {
+  margin-bottom: 1vh;
+}
+.confirmDate {
+  margin-top: 1vh;
+}
+.selectDate,
+.confirmDate,
+.confirmSlot {
+  font-family: $fontFamily;
+  color: $colorDark;
+  font-size: 1rem;
+}
+.selectDate {
+  font-size: 1.1rem;
+}
+.react-calendar {
+  height: 19vh;
+}
+.confirmDate,
+.selectTime,
+.slot,
+.selectVehicle,
+.vehicle {
+  color: $colorDark;
+  font-size: 0.8rem;
+}
+
+.confirmDate,
+.selectTime,
+.selectVehicle {
+  font-size: 1.4rem;
+}
+.confirmSlot {
+  font-family: $fontFamily;
+  color: $colorDark;
+  text-align: center;
+  margin-bottom: 1vh;
+}
+
+#selectTime,
+#selectVehicle {
+  font-size: 1.2rem;
+  border: double 1.5px transparent;
+  border-radius: 30px;
+  background-image: linear-gradient($colorLight, $colorLight), $gradient180deg;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  width: 80vw;
+  text-align: center;
+}
+
+.submitButton {
+  display: flex;
+  align-items: center;
+  font-family: $fontFamily;
+  background: $gradient180deg;
+  border: solid $colorDark 2px;
+  border-color: $colorDark;
+  box-shadow: $colorDark 5px 7px 15px 1px;
+  border-radius: 10px 50px;
+  text-shadow: $textDropShadow;
+  color: $colorLight;
+  margin: auto;
+  width: auto;
+  padding: 5vw;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 3vh;
+  height: 1vh;
+}
+
+.timeVehicule {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 1vh;
+}
+@media screen and (min-width: 600px) {
+  .allElements {
+    width: auto;
+    padding-top: 0;
+  }
+  .backButtonModal {
+    img {
+      width: 5vw;
+    }
+  }
+  .selectedDateDisplay {
+    margin-top: 0.1vh;
+  }
+
+  .titleCard {
+    width: 30vw;
+    height: 6vh;
+    margin: 0;
+    margin-bottom: 1vh;
+    padding: 0;
+  }
+
+  .submitButton {
+    height: 5vh;
+    font-size: 1.2rem;
+    padding: 1.5vw;
+    margin-top: 2vh;
+  }
+
+  .timeVehicule {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.1vh;
+  }
+
+  .slot,
+  .vehicle {
+    max-width: 20vw;
+  }
+
+  .slot {
+    margin: 2vh;
+  }
+
+  .selectVehicle {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  }
+
+  .allElementsCalendar {
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .react-calendar {
+    width: 40rem;
+  }
+  .confirmDate {
+    margin-top: 2vh;
+  }
+}

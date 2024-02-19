@@ -1,0 +1,126 @@
+@import "../../variable.scss";
+
+* {
+  margin: 0;
+}
+
+.chargepointBookAll {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $colorLight;
+  border: 1px $colorDark solid;
+  border-radius: 10px;
+}
+
+.stationName {
+  font-family: $fontFamily;
+  font-size: 1.7rem;
+  color: $colorLight;
+  text-shadow: $textDropShadow;
+  background: $gradient90deg;
+  border: solid $colorDark 2px;
+  box-shadow: $colorDark 5px 7px 15px 1px;
+  border-radius: 10px 50px;
+  width: 70vw;
+  height: 10vh;
+  text-align: center;
+  padding: 5vw;
+  margin-bottom: 5vh;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.stationInfos {
+  background-color: $colorPrimary_trans;
+  border-radius: 10px;
+  font-family: $fontFamily;
+  font-size: 1rem;
+  line-height: 2rem;
+  width: 80vw;
+  height: auto;
+  list-style-type: none;
+  padding: 2vw;
+}
+
+.date,
+.time {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.adressStation {
+  display: block;
+}
+
+.plugList {
+  padding: 0 1rem;
+}
+.typePlugItem {
+  display: inline-block;
+  margin: 0.1rem;
+}
+.imgPlug {
+  height: 3vh;
+  margin-bottom: -0.4rem;
+}
+.book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $fontFamily;
+  font-size: 1.5rem;
+  color: $colorLight;
+  background: $gradient90deg;
+  border: solid $colorDark 2px;
+  box-shadow: $colorDark 5px 7px 15px 1px;
+  border-radius: 10px 50px;
+  width: 35vw;
+  height: 8vh;
+  text-shadow: $textDropShadow;
+  align-self: flex-end;
+  margin-top: 6vh;
+  margin-left: 25vw;
+}
+
+.dateChoose,
+.timeChoose,
+.adressStationChoose,
+.available,
+.fullPower,
+.access {
+  color: $colorPrimary;
+  margin: 0 0.5vw;
+}
+
+@media screen and (min-width: 600px) {
+  .stationName {
+    font-size: 2.5rem;
+    width: 32vw;
+    height: auto;
+    padding: 2vw;
+  }
+
+  .stationInfos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 5px;
+    align-items: flex-start;
+    padding: 1vh 2vw;
+    font-size: 1.5rem;
+    width: 35vw;
+  }
+
+  .book {
+    font-size: 2rem;
+    margin-top: 5vh;
+    margin-left: 11vw;
+    height: 10vh;
+    width: 14vw;
+  }
+  abbr {
+    font-size: 1.1rem;
+  }
+}

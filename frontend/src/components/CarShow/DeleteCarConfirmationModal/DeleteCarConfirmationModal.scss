@@ -1,0 +1,81 @@
+@import "../../../variable.scss";
+
+.AlertDialogOverlay {
+  background-color: $colorDark;
+  opacity: 60%;
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.AlertDialogContent {
+  background-color: $colorLight;
+  border-radius: 6px;
+  box-shadow: $boxShadow;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 500px;
+  max-height: 85vh;
+  padding: 25px;
+  animation: contentShow 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.AlertDialogContent:focus {
+  outline: none;
+}
+
+.AlertDialogTitle {
+  margin: 0;
+  color: $colorDark;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.AlertDialogDescription {
+  margin-bottom: 20px;
+  color: red;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+.chooseButton {
+  display: flex;
+  gap: 25px;
+  justify-content: flex-end;
+}
+
+.carButtonDelete {
+  border-radius: $borderButton;
+  background: $gradient180deg;
+  transform: translate(-50%);
+  font-size: 1.2rem;
+  width: 22vw;
+  height: 5vh;
+  color: $colorLight;
+  text-shadow: $textShadow;
+  border: $borderDark;
+  box-shadow: $boxShadow;
+}
+.carButtonDelete:hover {
+  box-shadow: $boxShadow;
+}
+.carButtonDelete:focus {
+  box-shadow: $boxShadow;
+}
+
+.carButtonDelete:hover {
+  background-color: $colorDark;
+}
+
+@media screen and (min-width: 800px) {
+  .carButtonDelete {
+    width: 10vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .carButtonDelete {
+    width: 7vw;
+  }
+}

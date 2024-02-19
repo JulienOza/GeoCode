@@ -1,0 +1,70 @@
+@import "../../variable.scss";
+
+* {
+  margin: 0;
+}
+.leaflet-container {
+  height: 100vh;
+}
+
+.searchBar {
+  position: absolute;
+  top: 3vh;
+  width: 70vw;
+  left: 50vw;
+  transform: translate(-50%);
+  z-index: 498;
+  .pka-input {
+    height: 5vh;
+    font-size: 1.2rem;
+  }
+}
+.pka-panel.pka-open {
+  font-size: 1.2rem;
+}
+
+.searchLabel {
+  position: absolute;
+  z-index: 0;
+}
+
+.popUpContainer {
+  display: flex;
+  flex-direction: column;
+  ul {
+    margin: 0;
+    padding-inline-start: 10px;
+  }
+}
+
+.popUpText {
+  font-size: 1.2rem;
+  list-style: none;
+  margin-block: 0.5rem;
+  span {
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}
+.markerButton {
+  font-size: 1.5rem;
+  background: $gradient180deg;
+  border-radius: $borderButton;
+  color: $colorLight;
+  padding: 0.7rem 3rem;
+  box-shadow: $boxShadow;
+  border: unset;
+  margin: 0 auto;
+}
+@media screen and (min-width: 800px) {
+  .searchBar {
+    width: 25vw;
+    .pka-input {
+      height: 5vh;
+      font-size: 1.5rem;
+    }
+  }
+  .pka-panel.pka-open {
+    font-size: 1.5rem;
+  }
+}

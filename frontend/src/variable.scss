@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+$colorPrimary: #21a89a;
+$colorPrimary_trans: #21a89a30;
+$colorSecondary: #7cd858;
+$colorDark: #525b5a;
+$colorLight: #e5e9e7;
+$gradient90deg: linear-gradient(
+  90deg,
+  rgba(33, 168, 154, 1) 0%,
+  rgba(124, 216, 88, 1) 100%
+);
+$gradient180deg: linear-gradient(
+  180deg,
+  rgba(33, 168, 154, 1) 0%,
+  rgba(124, 216, 88, 1) 100%
+);
+
+$textDropShadow: Opx 4px 4px $colorDark;
+
+$fontFamily: "Atkinson Hyperlegible";
+
+$borderButton: 5px 30px 5px 30px;
+$boxShadow: 4px 5px 8px 0px $colorDark;
+$boxShadow_inv: -4px 5px 8px 0px $colorDark;
+$borderDark: 2px solid $colorDark;
+$textShadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

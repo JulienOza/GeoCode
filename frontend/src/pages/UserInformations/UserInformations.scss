@@ -1,0 +1,129 @@
+@import "../../variable.scss";
+
+.viewport_userinformations::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 25vh;
+  background: $gradient90deg;
+  z-index: -1;
+  border-bottom: $borderDark;
+  box-shadow: $boxShadow;
+}
+
+.viewport_userinformations {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 4rem 1fr 2fr 8%;
+  grid-template-rows: 20% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr 1fr;
+  justify-items: center;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.userpicture {
+  height: 30vh;
+  border-radius: 41px 100% 100% 100%;
+  margin: 2vh 0 0 2vh;
+  box-shadow: $boxShadow_inv;
+  border: 1px solid $colorDark;
+  background-color: $colorLight;
+  grid-area: 1 / 1 / 4 / 4;
+  justify-self: start;
+  align-self: start;
+}
+
+.viewport_userinformations .icon {
+  width: 2.2rem;
+  height: auto;
+}
+
+.username {
+  border: $borderDark;
+  border-radius: 5px 30px 5px 30px;
+  box-shadow: $boxShadow_inv;
+  background-color: $colorLight;
+  padding: 0.5rem 0;
+  text-align: center;
+  justify-self: end;
+  width: 70%;
+}
+
+.userinfo {
+  border: double 1.5px transparent;
+  background-image: linear-gradient($colorLight, $colorLight), $gradient90deg;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: 5px;
+  box-shadow: $boxShadow_inv;
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: center;
+  justify-self: start;
+}
+
+.viewport_userinformations .firstname {
+  grid-area: 2 / 2 / 3 / 4;
+}
+
+.viewport_userinformations .lastname {
+  grid-area: 3 / 2 / 4 / 4;
+}
+
+.birthdate_icon {
+  grid-area: 5 / 1 / 6 / 2;
+}
+
+.viewport_userinformations .birthdate {
+  grid-area: 5 / 2 / 6 / 4;
+}
+
+.gender_icon {
+  grid-area: 6 / 1 / 7 / 2;
+}
+
+.viewport_userinformations .gender {
+  grid-area: 6 / 2 / 7 / 4;
+}
+
+.email_icon {
+  grid-area: 7 / 1 / 8 / 2;
+}
+
+.viewport_userinformations .email {
+  grid-area: 7 / 2 / 8 / 4;
+}
+
+.address_icon {
+  grid-area: 8 / 1 / 9 / 2;
+}
+
+.viewport_userinformations .zipcode {
+  grid-area: 8 / 2 / 9 / 3;
+}
+
+.viewport_userinformations .city {
+  grid-area: 8 / 3 / 9 / 4;
+}
+
+.viewport_userinformations .style-button {
+  grid-area: 10 / 1 / 11 / 5;
+  background: $gradient180deg;
+  width: 12rem;
+  height: 4rem;
+  box-shadow: $boxShadow_inv;
+  color: $colorLight;
+  border: $borderDark;
+  text-shadow: $textShadow;
+}
+
+@media screen and (min-width: 700px) {
+  .viewport_userinformations {
+    margin-right: 30vw;
+    margin-left: 30vw;
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}

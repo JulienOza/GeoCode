@@ -1,0 +1,79 @@
+@import "../../variable.scss";
+.allBook {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-block: 1vh;
+  padding-bottom: 2vh;
+}
+
+.bookingStationInfos {
+  background-color: $colorPrimary_trans;
+  border-radius: 10px;
+  font-family: $fontFamily;
+  font-size: 1rem;
+  line-height: 2rem;
+  width: 80vw;
+  height: auto;
+  list-style-type: none;
+  padding: 2vw;
+  li {
+    list-style: none;
+  }
+}
+.bookingName {
+  text-decoration: underline;
+}
+
+.bookCancel {
+  font-family: $fontFamily;
+  font-size: 1rem;
+  color: $colorLight;
+  background: $gradient90deg;
+  border: solid $colorDark 2px;
+  box-shadow: $colorDark 5px 7px 15px 1px;
+  border-radius: 10px 50px;
+  text-shadow: $textDropShadow;
+  padding: 2vh 3vw;
+  margin-top: 2vh;
+  margin-left: 32vw;
+}
+
+@media screen and (min-width: 600px) {
+  .allBook {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-block: 1vh;
+    padding-bottom: 2vh;
+  }
+  .bookingStationInfos {
+    width: 40vw;
+  }
+  .bookCancel {
+    padding: 1vh 2vw;
+    width: 20vw;
+    margin-left: 15vw;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .allBook {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-block: 1vh;
+    padding-bottom: 2vh;
+  }
+  .bookingStationInfos {
+    width: 30vw;
+  }
+  .bookCancel {
+    padding: 1vh 2vw;
+    width: 12vw;
+    margin-left: 15vw;
+  }
+}

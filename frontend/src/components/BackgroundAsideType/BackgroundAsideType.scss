@@ -1,0 +1,46 @@
+@import "../../variable.scss";
+
+.titleSubscribe {
+  writing-mode: vertical-lr;
+  color: $colorLight;
+  transform: rotate(-180deg);
+  font-size: clamp(2rem, 4vw, 7rem);
+  font-family: $fontFamily;
+  margin-top: 1.5vh;
+  align-self: center;
+}
+
+.mainContent {
+  background-color: $colorLight;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  width: 93vw;
+}
+
+.background {
+  display: flex;
+  background: $gradient180deg;
+  min-height: 100vh;
+}
+
+.contentAside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 11vw;
+}
+
+@media screen and (min-width: 600px) {
+  .contentAside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 5vw;
+  }
+  .mainContent {
+    background-color: $colorLight;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    width: 95vw;
+  }
+}

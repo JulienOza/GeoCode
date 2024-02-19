@@ -1,0 +1,160 @@
+@import "../../variable.scss";
+.carTopPageTitle {
+  color: $colorLight;
+  font-size: 3.3rem;
+  font-weight: 400;
+  text-shadow: $textShadow;
+}
+.carTopPageSubtitle {
+  color: $colorDark;
+  font-size: 2rem;
+  text-shadow: $textShadow;
+}
+.carTopPageHeader {
+  height: 30vh;
+  margin: 2vh 5vw;
+}
+.carTopPage::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 30vh;
+  background: $gradient90deg;
+  border-bottom: $borderDark;
+  box-shadow: $boxShadow;
+  z-index: -1;
+}
+.carModel {
+  width: 75vw;
+  margin-left: 20vw;
+  margin-top: 5vh;
+}
+.carMainContent {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 14vh;
+}
+.carCardPlug {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: $borderButton;
+  border: solid 2px black;
+  background-color: rgba(33, 168, 154, 0.3);
+  width: 35vw;
+}
+
+.carPlugType,
+.carElectricalPower {
+  width: 15vw;
+  padding-top: 2vh;
+}
+.carCardText {
+  font-size: 1.5rem;
+}
+.carCardText2 {
+  font-size: 1.5rem;
+  padding-bottom: 2vh;
+}
+.nextCar {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nextCarMirror {
+  transform: scaleX(-1);
+}
+.nextCarButton {
+  width: 10vw;
+}
+.addCar {
+  border-radius: $borderButton;
+  background: $gradient180deg;
+  margin-left: 50vw;
+  transform: translate(-50%);
+  margin-top: 5vh;
+  font-size: 2rem;
+  color: $colorLight;
+  text-shadow: $textShadow;
+  box-shadow: $boxShadow;
+  border: $borderDark;
+}
+
+.textInformationCar {
+  text-align: center;
+  margin-top: 10vh;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 600px) {
+  .carModel {
+    width: 70vw;
+    margin-left: 20vw;
+    margin-top: 0vh;
+  }
+  .carCardPlug {
+    width: 30vw;
+    margin-top: 5vh;
+  }
+  .carPlugType,
+  .carElectricalPower {
+    width: 10vw;
+    padding-top: 2vh;
+  }
+  .addCar {
+    padding: 2vw;
+  }
+  .ButtonShowCarContainer {
+    display: flex;
+    justify-content: center;
+    .addCar {
+      margin-left: 0;
+      transform: translate(0%);
+    }
+    gap: 5vw;
+  }
+  .carCardText {
+    font-size: 2rem;
+  }
+  .carCardText2 {
+    font-size: 2rem;
+    padding-bottom: 2vh;
+  }
+  .nextCarText {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .carModel {
+    width: 45vw;
+    margin-left: 35vw;
+    margin-top: -5vh;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .carModel {
+    width: 35vw;
+    margin-left: 45vw;
+    margin-top: -12vh;
+  }
+  .carPlugType,
+  .carElectricalPower {
+    width: 8vw;
+  }
+  .carCardPlug {
+    width: 30vw;
+    margin-top: 0vh;
+  }
+  .carTopPageTitle {
+    font-size: 5rem;
+  }
+  .carTopPageSubtitle {
+    font-size: 3rem;
+  }
+}

@@ -1,0 +1,226 @@
+@import "../../variable.scss";
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.subscribeForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(9, 1rem 2rem 1.6rem);
+  grid-template-areas:
+    "labelLastName . . ."
+    "inputLastName inputLastName . picture"
+    "errorsLastName errorsLastName errorsLastName picture"
+    "labelFirstName . . picture"
+    "inputFirstName inputFirstName . ."
+    "errorsFirstName errorsFirstName errorsFirstName ."
+    "labelEmail . . ."
+    "inputEmail inputEmail inputEmail inputEmail"
+    "errorsEmail errorsEmail errorsEmail errorsEmail"
+    "labelGender labelGender labelGender labelGender"
+    "inputGender . . ."
+    "errorsGender errorsGender errorsGender errorsGender"
+    "labelBirthdate labelBirthdate labelBirthdate labelBirthdate"
+    "inputBirthdate inputBirthdate inputBirthdate inputBirthdate"
+    "errorsBirthdate errorsBirthdate errorsBirthdate errorsBirthdate"
+    "labelZipcode labelZipcode labelZipcode labelZipcode"
+    "inputZipcode inputZipcode inputZipcode inputZipcode"
+    "errorsZipcode errorsZipcode errorsZipcode errorsZipcode"
+    "labelCity labelCity labelCity labelCity"
+    "inputCity inputCity inputCity inputCity"
+    "errorsCity errorsCity errorsCity errorsCity"
+    "labelPassword labelPassword labelPassword labelPassword"
+    "inputPassword inputPassword inputPassword inputPassword"
+    "errorsPassword errorsPassword errorsPassword errorsPassword"
+    "labelConfirmPassword labelConfirmPassword labelConfirmPassword labelConfirmPassword"
+    "inputConfirmPassword inputConfirmPassword inputConfirmPassword inputConfirmPassword"
+    "errorsConfirmPassword errorsConfirmPassword errorsConfirmPassword errorsConfirmPassword"
+    " . . . submit";
+  font-family: $fontFamily;
+  margin: 3vh 2vw;
+  .labelSubscribe:nth-of-type(1) {
+    grid-area: labelLastName;
+  }
+  .inputSubscribe:nth-of-type(1) {
+    grid-area: inputLastName;
+  }
+  .errorlastName {
+    grid-area: errorsLastName;
+  }
+  .labelSubscribe:nth-of-type(2) {
+    grid-area: labelFirstName;
+  }
+  .inputSubscribe:nth-of-type(2) {
+    grid-area: inputFirstName;
+  }
+  .errorfirstName {
+    grid-area: errorsFirstName;
+  }
+  .labelPicture {
+    grid-area: picture;
+  }
+  .labelSubscribe:nth-of-type(4) {
+    grid-area: labelEmail;
+  }
+  .inputSubscribe:nth-of-type(4) {
+    grid-area: inputEmail;
+  }
+  .erroremail {
+    grid-area: errorsEmail;
+  }
+  .labelSubscribe:nth-of-type(5) {
+    grid-area: labelGender;
+  }
+  .selectGender {
+    grid-area: inputGender;
+  }
+  .errorgender {
+    grid-area: errorsGender;
+  }
+  .labelSubscribe:nth-of-type(6) {
+    grid-area: labelBirthdate;
+  }
+  .inputSubscribe:nth-of-type(5) {
+    grid-area: inputBirthdate;
+  }
+  .errorbirthdate {
+    grid-area: errorsBirthdate;
+  }
+  .labelSubscribe:nth-of-type(7) {
+    grid-area: labelZipcode;
+  }
+  .inputSubscribe:nth-of-type(6) {
+    grid-area: inputZipcode;
+  }
+  .errorzipcode {
+    grid-area: errorsZipcode;
+  }
+  .labelSubscribe:nth-of-type(8) {
+    grid-area: labelCity;
+  }
+  .inputSubscribe:nth-of-type(7) {
+    grid-area: inputCity;
+  }
+  .errorcity {
+    grid-area: errorsCity;
+  }
+  .labelSubscribe:nth-of-type(9) {
+    grid-area: labelPassword;
+  }
+  .inputSubscribe:nth-of-type(8) {
+    grid-area: inputPassword;
+  }
+  .errorpassword {
+    grid-area: errorsPassword;
+  }
+  .labelSubscribe:nth-of-type(10) {
+    grid-area: labelConfirmPassword;
+  }
+  .inputSubscribe:nth-of-type(9) {
+    grid-area: inputConfirmPassword;
+  }
+  .errorconfirmPassword {
+    grid-area: errorsConfirmPassword;
+  }
+  .submit {
+    grid-area: submit;
+  }
+  gap: 5px;
+  input,
+  select {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+.labelSubscribe {
+  font-size: clamp(0.5rem, 5vw, 1.5rem);
+  margin-bottom: 0.1vh;
+  position: relative;
+}
+
+.inputSubscribe,
+.selectGender {
+  margin-top: 1vh;
+  padding: 0 0.4rem;
+  border: double 1.5px transparent;
+  border-radius: 30px;
+  background-image: linear-gradient($colorLight, $colorLight), $gradient180deg;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.6);
+  height: clamp(0.8vh, 5vh, 4vh);
+}
+
+.submit {
+  background: $gradient180deg;
+  color: $colorLight;
+  width: clamp(7.5rem, 20vw, 12rem);
+  height: clamp(3.5rem, 4vw, 4rem);
+  text-align: center;
+  font-size: clamp(1rem, 4vw, 2rem);
+  border: none;
+  border-color: $colorDark;
+  border-radius: $borderButton;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.6);
+  margin-top: 3vh;
+}
+
+.error {
+  color: red;
+  font-family: $fontFamily;
+  font-size: clamp(0.65rem, 1vw, 0.9rem);
+  margin-top: 1.2vh;
+  margin-left: 1vw;
+}
+
+.addPicture {
+  width: 100%;
+}
+.inputPictureProfil {
+  width: 0.1vw;
+  height: 0.1vw;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputPictureProfil:focus + .labelPicture,
+.inputPictureProfil + .labelPicture:hover {
+  .addPicture {
+    filter: drop-shadow(0 0 10px $colorDark);
+  }
+}
+@media screen and (min-width: 700px) {
+  .addPicture {
+    width: 9vw;
+  }
+
+  .subscribeForm {
+    grid-template-rows: repeat(9, 1.5rem 2rem 1.9rem);
+    margin: 1vh 30vw;
+    gap: 0px;
+  }
+  .error {
+    margin-top: 1.5vh;
+  }
+  .submit {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .addPicture {
+    width: 9vw;
+  }
+
+  .subscribeForm {
+    grid-template-rows: repeat(9, 1.5rem 2.1rem 1.9rem);
+    margin: 2vh 30vw;
+  }
+}
